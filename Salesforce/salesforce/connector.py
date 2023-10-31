@@ -98,7 +98,9 @@ class SalesforceConnector(AsyncConnector):
         rate_limiter = AsyncLimiter(self.configuration.ratelimit_per_minute)
 
         configuration = self.module._configuration
-        conf_msg = f"Configuration:\n - type: {type(configuration)}\n - content: {str(configuration)}"
+        model_def = get_annotation_for(self.module.__class__, "configuration")
+        model = get_as_model(model, configuration)
+        conf_msg = f"Configuration:\n - type: {type(configuration)}\n - content: {str(configuration)}\n - model_def: {model_def}\n - model: {model}"
         logger.info(conf_msg)
         self.log(level="info", message=conf_msg)
 
