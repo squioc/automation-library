@@ -8,9 +8,9 @@ import orjson
 import pytest
 from faker import Faker
 
+from awsbyassumerole.trigger_sqs_messages import AwsSqsMessagesTrigger, AwsSqsMessagesTriggerConfiguration
 from aws_helpers.sqs_wrapper import SqsWrapper
 from connectors import AwsModule
-from connectors.trigger_sqs_messages import AwsSqsMessagesTrigger, AwsSqsMessagesTriggerConfiguration
 
 
 @pytest.fixture

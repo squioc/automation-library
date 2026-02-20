@@ -5,8 +5,9 @@ from pathlib import Path
 import pytest
 from faker import Faker
 
+from awsbyassumerole.trigger_s3_flowlogs import AwsS3FlowLogsTrigger
 from connectors import AwsModule
-from connectors.s3.trigger_s3_flowlogs import AwsS3FlowLogsConfiguration, AwsS3FlowLogsTrigger
+from connectors.s3.trigger_s3_flowlogs import AwsS3FlowLogsConfiguration
 from tests.helpers import async_list, async_temporary_file
 
 
