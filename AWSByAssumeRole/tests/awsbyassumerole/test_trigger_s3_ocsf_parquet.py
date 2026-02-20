@@ -7,9 +7,9 @@ import aiofiles
 import orjson
 import pytest
 
+from awsbyassumerole.trigger_s3_ocsf_parquet import AwsS3OcsfTrigger
 from connectors import AwsModule
 from connectors.s3 import AwsS3QueuedConfiguration
-from connectors.s3.trigger_s3_ocsf_parquet import AwsS3OcsfTrigger
 from tests.helpers import async_list, async_temporary_file
 
 

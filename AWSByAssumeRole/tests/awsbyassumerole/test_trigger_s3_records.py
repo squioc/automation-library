@@ -6,9 +6,9 @@ import orjson
 import pytest
 from faker import Faker
 
+from awsbyassumerole.trigger_s3_records import AwsS3RecordsTrigger
 from connectors import AwsModule
 from connectors.s3 import AwsS3QueuedConfiguration
-from connectors.s3.trigger_s3_records import AwsS3RecordsTrigger
 from tests.helpers import async_list, async_temporary_file
 
 

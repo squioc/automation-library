@@ -6,8 +6,9 @@ from pathlib import Path
 import pytest
 from faker import Faker
 
+from awsbyassumerole.trigger_s3_cloudfront import AwsS3CloudFrontTrigger
 from connectors import AwsModule
-from connectors.s3.trigger_s3_cloudfront import AwsS3CloudFrontConfiguration, AwsS3CloudFrontTrigger
+from connectors.s3.trigger_s3_cloudfront import AwsS3CloudFrontConfiguration
 from tests.helpers import async_list, async_temporary_file
 
 

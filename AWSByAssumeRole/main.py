@@ -4,15 +4,15 @@ from sekoia_automation.loguru.config import init_logging
 
 from asset_connector.device_assets import AwsDeviceAssetConnector
 from asset_connector.users_assets import AwsUsersAssetConnector
-from aws_helpers.account_validator import AwsAccountValidator
+from awsbyassumerole.account_validator import AwsAccountValidator
+from awsbyassumerole.trigger_s3_cloudfront import AwsS3CloudFrontTrigger
+from awsbyassumerole.trigger_s3_flowlogs import AwsS3FlowLogsTrigger
+from awsbyassumerole.trigger_s3_flowlogs_parquet import AwsS3FlowLogsParquetRecordsTrigger
+from awsbyassumerole.trigger_s3_logs import AwsS3LogsTrigger
+from awsbyassumerole.trigger_s3_ocsf_parquet import AwsS3OcsfTrigger
+from awsbyassumerole.trigger_s3_records import AwsS3RecordsTrigger
+from awsbyassumerole.trigger_sqs_messages import AwsSqsMessagesTrigger
 from connectors import AwsModule
-from connectors.s3.trigger_s3_cloudfront import AwsS3CloudFrontTrigger
-from connectors.s3.trigger_s3_flowlogs import AwsS3FlowLogsTrigger
-from connectors.s3.trigger_s3_flowlogs_parquet import AwsS3FlowLogsParquetRecordsTrigger
-from connectors.s3.trigger_s3_logs import AwsS3LogsTrigger
-from connectors.s3.trigger_s3_ocsf_parquet import AwsS3OcsfTrigger
-from connectors.s3.trigger_s3_records import AwsS3RecordsTrigger
-from connectors.trigger_sqs_messages import AwsSqsMessagesTrigger
 
 if __name__ == "__main__":
     init_logging()
