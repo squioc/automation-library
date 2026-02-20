@@ -318,6 +318,33 @@ files = [
 pyflakes = ">=1.1.0,<3"
 
 [[package]]
+name = "aws-automation"
+version = "0.0"
+description = ""
+optional = false
+python-versions = ">=3.11,<3.12"
+groups = ["main"]
+files = []
+develop = false
+
+[package.dependencies]
+aiobotocore = ">=2.24.0"
+aiofiles = "^23.1.0"
+aiolimiter = ">=1.1.0,<2.0.0"
+async-lru = "^2.0.2"
+boto3 = ">=1.39.9"
+botocore = ">=1.39.9"
+loguru = "^0.7.0"
+orjson = "^3.6.7"
+pandas = "^2.2.2"
+pyarrow = "^17.0.0"
+sekoia-automation-sdk = "^1.22.2"
+
+[package.source]
+type = "directory"
+url = "../AWS"
+
+[[package]]
 name = "binaryornot"
 version = "0.4.4"
 description = "Ultra-lightweight pure Python package to check if a file is binary or text."
@@ -4379,4 +4406,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.12"
-content-hash = "e7389fcc7203de35f1b9c057de1d0a9b259b09c45cf959d78013099980d841b4"
+content-hash = "9fdc4da41e868641646810ca7fec434d4b06c04d99c8d2576801985bbbdd6e3d"
