@@ -38,7 +38,7 @@ def aws_s3_logs_trigger_config(faker: Faker) -> AwsS3LogsConfiguration:
     """
     config = {
         "frequency": 0,
-        "queue_name": faker.word(),
+        "queue_url": faker.word(),
         "separator": "\n",
         "skip_first": 1,
         "ignore_comments": True,

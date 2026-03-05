@@ -10,9 +10,9 @@
         "description": "Batch frequency in seconds",
         "default": 60
       },
-      "queue_name": {
+      "queue_url": {
         "type": "string",
-        "description": "The name of the SQS queue that received the notifications of the creation of S3 objects"
+        "description": "The URL of the SQS queue that received the notifications of the creation of S3 objects"
       },
       "chunk_size": {
         "type": "integer",
@@ -46,7 +46,7 @@
     },
     "required": [
       "frequency",
-      "queue_name",
+      "queue_url",
       "intake_key"
     ],
     "title": "connector configuration",

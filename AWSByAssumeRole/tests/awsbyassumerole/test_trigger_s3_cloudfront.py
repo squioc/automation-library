@@ -58,7 +58,7 @@ def test_data_4_1() -> bytes:
 def aws_s3_cloudfront_trigger_config(faker: Faker) -> AwsS3CloudFrontConfiguration:
     config = {
         "frequency": 0,
-        "queue_name": faker.word(),
+        "queue_url": faker.word(),
         "separator": "\n",
         "skip_first": 0,
         "ignore_comments": False,

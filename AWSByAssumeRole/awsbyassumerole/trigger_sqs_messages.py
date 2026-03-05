@@ -16,7 +16,7 @@ class AwsSqsMessagesTriggerConfiguration(AbstractAwsConnectorConfiguration):
     sqs_frequency: int = 10
     chunk_size: int = 10000
     delete_consumed_messages: bool = True
-    queue_name: str
+    queue_url: str
 
 
 class AwsSqsMessagesTrigger(AbstractAwsConnector):
@@ -44,7 +44,7 @@ class AwsSqsMessagesTrigger(AbstractAwsConnector):
         config = SqsConfiguration(
             frequency=self.configuration.sqs_frequency,
             delete_consumed_messages=self.configuration.delete_consumed_messages,
-            queue_name=self.configuration.queue_name,
+            queue_url=self.configuration.queue_url,
             aws_access_key_id=self.module.configuration.aws_access_key,
             aws_secret_access_key=self.module.configuration.aws_secret_access_key,
             aws_region=self.module.configuration.aws_region_name,
